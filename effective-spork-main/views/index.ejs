@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <style>
+        h1 {
+            font-family: "Bungee Shade", sans-serif;
+            text-align: center;
+        }
+    </style>
+    <title>Vehicles dB</title>
+</head>
+
+<body>
+    <h1>VEHICLES Database</h1>
+    <div class="container">
+        <form action="/vehicles" method="post">
+            <div class="row">
+                <div class="mb-3 col-6">
+                    <label for="brand" class="form-label">Manufacturer</label>
+                    <input type="text" class="form-control" id="brand" name="brand" required>
+                </div>
+                <div class="mb-3 col-6">
+                    <label for="model" class="form-label">Model</label>
+                    <input type="text" class="form-control" id="model" name="model" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-0 col-6">
+                    <label for="fuel_type">Fuel Type:</label>
+                    <select class="form-select" id="fuel_type" name="fuel_type" required>
+                        <option selected>Select Fuel Type</option>
+                        <option value="electric">Electric</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                    </select>
+                </div>
+                <div class="mb-3 col-6">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="text" class="form-control" id="year" name="year" required>
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Create">
+        </form>
+    </div><!--end container-->
+    <div class="container">
+        <div class=" col mt-6">
+            <form action="/vehicles" method="get">
+                <input class="btn btn-outline-success" type="submit" value="Get All Vechicles">
+            </form>
+        </div>
+    </div><!--end container-->
+</body>
+
+</html>
